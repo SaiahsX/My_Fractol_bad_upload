@@ -6,11 +6,13 @@
 /*   By: oadewumi <oadewumi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 18:18:49 by oadewumi          #+#    #+#             */
-/*   Updated: 2024/06/13 18:49:57 by oadewumi         ###   ########.fr       */
+/*   Updated: 2024/06/14 16:10:11 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int main(int ac, char *av[])
 {
-
+ 	validate_input(ac, av);
+    
+    return (0);
 }
