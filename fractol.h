@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 18:20:10 by oadewumi          #+#    #+#             */
-/*   Updated: 2024/06/14 22:39:45 by oadewumi         ###   ########.fr       */
+/*   Updated: 2024/07/01 18:17:25 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,39 @@
 # define WIDTH 700
 # define HEIGHT 700
 
-// typedef struct s_mlx
+// typedef struct s_draw
 // {
 // 	void		*window;
 // 	void		*context;
 // 	int32_t		width;
 // 	int32_t		height;
 // 	double		delta_time;
-// }	t_mlx_t;
+// }	t_draw;
 
 // typedef void (*mlx_scrollfunc)(double xdelta, double ydelta, void* param);
 
+typedef struct s_draw
+{
+        mlx_t		*mlx;
+        mlx_image_t	*img;
+        double		x_min;
+        double		x_max;
+        double		y_min;
+        double		y_max;
+        uint32_t	x;
+        uint32_t	y;
+        double		cx;
+        double		cy;
+        char		type;
+}	t_draw;
+
+
 void	validate_input(int argc, char *argv[]);
-int	    ft_strcmp(const char *src, const char *dest);
+// int	    ft_strcmp(const char *src, const char *dest);
 double  ft_atod(char *str);
 
 //error handling
-void	error_message(char *str);
+void	error_message(char *str, char *txt);
 void    set_and_perror(const char *msg);
 
 # endif
