@@ -6,9 +6,11 @@
 /*   By: oadewumi <oadewumi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 18:18:49 by oadewumi          #+#    #+#             */
-/*   Updated: 2024/06/14 16:10:11 by oadewumi         ###   ########.fr       */
+/*   Updated: 2024/07/01 14:07:54 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "fractol.h"
 
 int main(int ac, char *av[])
 {

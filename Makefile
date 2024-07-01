@@ -6,7 +6,7 @@
 #    By: oadewumi <oadewumi@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/13 16:05:10 by oadewumi          #+#    #+#              #
-#    Updated: 2024/06/14 11:41:06 by oadewumi         ###   ########.fr        #
+#    Updated: 2024/07/01 14:33:41 by oadewumi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,14 @@ NAME = fractol
 LIBMLX = ./MLX42
 LIBFT_DIR = ./libft
 
-SOURCES = fractol.c
+SOURCES = fractol.c \
+			security_utilities.c \
+			utilities.c
 OFILES = $(SOURCES:.c=.o)
 
 CC = gcc
 RM = rm -rf
-CFLAGS = -Wall -Wextra -Werror -Ofast -I $(LIBFT_DIR) ./include -I $(LIBMLX)/include -v
+CFLAGS = -Wall -Wextra -Werror -Ofast -I $(LIBFT_DIR) -I ./include -I $(LIBMLX)/include
 LDFLAGS = -L $(LIBMLX)/build
 LIBS = -lmlx42 -ldl -lglfw -pthread -lm
 LIBFT = libft/libft.a
@@ -31,7 +33,7 @@ libmlx:
 	@cmake $(LIBMLX) -B $(LIBMLX)/build && make -C $(LIBMLX)/build -j4
 
 $(NAME): $(LIBFT) $(OFILES)
-	$(CC) $(OFILES) $(LIBFT) $(LDFLAGS) $(LIBS) -o $(NAME) -v
+	$(CC) $(OFILES) $(LIBFT) $(LDFLAGS) $(LIBS) -o $(NAME)
 
 $(LIBFT):
 	@make -C $(LIBFT_DIR)
