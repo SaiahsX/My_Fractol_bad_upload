@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 18:20:10 by oadewumi          #+#    #+#             */
-/*   Updated: 2024/07/01 18:17:25 by oadewumi         ###   ########.fr       */
+/*   Updated: 2024/07/02 14:15:32 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,16 @@ typedef struct s_draw
         double		x_max;
         double		y_min;
         double		y_max;
+        char		type;
         uint32_t	x;
         uint32_t	y;
-        double		cx;
-        double		cy;
-        char		type;
+        double		cmplx_x;
+        double		cmplx_y;
 }	t_draw;
 
 
 void	validate_input(int argc, char *argv[]);
+t_draw	mlx_init_settings(char *argv[], t_draw *draw);
 // int	    ft_strcmp(const char *src, const char *dest);
 double  ft_atod(char *str);
 
